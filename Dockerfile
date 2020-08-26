@@ -6,7 +6,6 @@ RUN apk --no-cache add ca-certificates tini git gcc musl-dev
 RUN go get -u github.com/golang/dep/cmd/dep
 WORKDIR /go/src/github.com/aattias/carbonbeat
 COPY ./ ${PROJECT_PATH}
-RUN dep ensure
 RUN CGO_ENABLED=0 GOOS=`go env GOHOSTOS` GOARCH=`go env GOHOSTARCH` go build -o carbonbeat 
 
 # Production image
