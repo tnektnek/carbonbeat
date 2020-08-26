@@ -31,7 +31,7 @@ func authenticatedSIEMGet(c *Client, e string) (*http.Response, error) {
 	if err != nil {
 		return &http.Response{}, err
 	}
-	req.Host = c.cfg.SIEMHost
+	//req.Host = c.cfg.SIEMHost
 	req.Header.Set("X-Auth-Token", c.cfg.SIEMKey+"/"+c.cfg.SIEMConnectorID)
 	req.Header.Set("User-Agent", "Carbonbeat")
 	resp, err := c.httpClient.Do(req)
@@ -49,7 +49,7 @@ func authenticatedAPIGet(c *Client, e string) (*http.Response, error) {
 	if err != nil {
 		return &http.Response{}, err
 	}
-	req.Host = c.cfg.APIHost
+	//req.Host = c.cfg.APIHost
 	req.Header.Set("X-Auth-Token", c.cfg.APIKey+"/"+c.cfg.APIConnectorID)
 	req.Header.Set("User-Agent", "Carbonbeat")
 	resp, err := c.httpClient.Do(req)
