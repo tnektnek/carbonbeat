@@ -5,7 +5,11 @@
 carbonbeat:
   # Defines how often an event is sent to the output
   period: 5m
-
+  
+  siem:
+    id: someid
+    key: somekey
+    host: https://someapi.net
   api:
     id: someid
     key: somekey
