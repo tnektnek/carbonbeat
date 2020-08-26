@@ -16,6 +16,8 @@ COPY --from=builder /go/src/github.com/aattias/carbonbeat/carbonbeat .
 RUN adduser -D -u 69999 -s /usr/sbin/nologin carbonbeat
 ADD carbonbeat.yml /carbonbeat.yml
 ADD carbonbeat.template.json /carbonbeat.template.json
+ADD carbonbeat.template.json /carbonbeat.template-es2x.json
+ADD carbonbeat.template.json /carbonbeat.template-es6x.json
 #USER carbonbeat
 ENTRYPOINT ["tini", "-g", "--"]
 CMD ["/carbonbeat", "-v", "-e", "-d", "'*'"]
