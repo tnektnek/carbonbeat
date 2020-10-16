@@ -1,6 +1,6 @@
 # Carbonbeat
 
-Carbonbeat currently supports shipping notifications from the Carbon Black Defense notifications API.
+Carbonbeat currently supports shipping notifications from the Carbon Black Defense notifications API. Just a fork from the main master branch to remove (legacy?) referenece to a v2 app preventing proper Docker build using the pulled master main.go
 
 ## Getting Started with Carbonbeat
 You'll need to provide your API credentials in `carbonbeat.yml`. CB Defense notifications api requires a `SIEM` type API key.
