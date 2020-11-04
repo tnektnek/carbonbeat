@@ -9,8 +9,8 @@ import (
 	"github.com/elastic/beats/libbeat/logp"
 	"github.com/elastic/beats/libbeat/publisher"
 
-	"github.com/tnektnek/carbonbeat/tree/master/carbonclient"
-	"github.com/tnektnek/carbonbeat/tree/master/config"
+	"github.com/tnektnek/carbonbeat/carbonclient"
+	"github.com/tnektnek/carbonbeat/config"
 )
 
 // Carbonbeat is the parent that provides fields for the methods
