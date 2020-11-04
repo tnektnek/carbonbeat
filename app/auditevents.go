@@ -5,7 +5,7 @@ import (
 
 	"github.com/elastic/beats/libbeat/common"
 	"github.com/elastic/beats/libbeat/logp"
-	"github.com/indeedsecurity/carbonbeat/v2/carbonclient"
+	"github.com/tnektnek/carbonbeat/carbonclient"
 )
 
 func (bt *Carbonbeat) processAuditEvents(ae carbonclient.AuditEvents) ([]common.MapStr, error) {

@@ -9,8 +9,8 @@ import (
 	"github.com/elastic/beats/libbeat/logp"
 	"github.com/elastic/beats/libbeat/publisher"
 
-	"github.com/indeedsecurity/carbonbeat/v2/carbonclient"
-	"github.com/indeedsecurity/carbonbeat/v2/config"
+	"github.com/tnektnek/carbonbeat/tree/master/carbonclient"
+	"github.com/tnektnek/carbonbeat/tree/master/config"
 )
 
 // Carbonbeat is the parent that provides fields for the methods
@@ -24,6 +24,7 @@ type Carbonbeat struct {
 // New creates beater
 func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 	config := config.DefaultConfig
+	fmt.Printf("%v\n",config)
 	if err := cfg.Unpack(&config); err != nil {
 		return nil, fmt.Errorf("Error reading config file: %v", err)
 	}

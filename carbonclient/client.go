@@ -48,6 +48,7 @@ func (c *Client) FetchSIEMEvents(endpoint string) (Notifications, error) {
 	}
 	endpoint = strings.TrimPrefix(endpoint, "/")
 	endpoint = fmt.Sprintf("%s/%s", c.cfg.SIEMHost, endpoint)
+	fmt.printf("%v\n",endpoint)
 	resp, err := authenticatedSIEMGet(c, endpoint)
 	if err != nil {
 		return events, err

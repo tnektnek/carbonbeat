@@ -4,16 +4,16 @@
 
 carbonbeat:
   # Defines how often an event is sent to the output
-  period: 5m
+  period: 5
   
   siem:
-    id: someid
-    key: somekey
-    host: https://someapi.net
+    id: BIH953U1C9
+    key: AWN47WY1QZE1M3ZAJZE2JT3H
+    host: https://defense-prod05.conferdeploy.net
   api:
-    id: someid
-    key: somekey
-    host: https://someapi.net
+    id: 14752
+    key: N33FQL3R
+    host: https://defense-prod05.conferdeploy.net
 
 #================================ General =====================================
 
@@ -616,7 +616,7 @@ output.elasticsearch:
 
 # Sets log level. The default log level is info.
 # Available log levels are: critical, error, warning, info, debug
-#logging.level: info
+logging.level: debug
 
 # Enable debug output for selected components. To enable all selectors use ["*"]
 # Other available selectors are "beat", "publish", "service"
@@ -641,10 +641,10 @@ logging.to_files: true
 logging.files:
   # Configure the path where the logs are written. The default is the logs directory
   # under the home path (the binary location).
-  #path: /var/log/carbonbeat
+  path: /var/log/carbonbeat
 
   # The name of the files where the logs are written to.
-  #name: carbonbeat
+  name: carbonbeat
 
   # Configure log file size limit. If limit is reached, log file will be
   # automatically rotated
