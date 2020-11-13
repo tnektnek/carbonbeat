@@ -14,7 +14,7 @@ RUN apk --no-cache add ca-certificates tini
 WORKDIR /
 COPY --from=builder /go/src/github.com/tnektnek/carbonbeat/carbonbeat .
 RUN adduser -D -u 69999 -s /usr/sbin/nologin carbonbeat
-ADD carbonbeat.full.yml /carbonbeat.yml
+ADD carbonbeat.yml /carbonbeat.yml
 ADD carbonbeat.template.json /carbonbeat.template.json
 ADD carbonbeat.template.json /carbonbeat.template-es2x.json
 ADD carbonbeat.template.json /carbonbeat.template-es6x.json
