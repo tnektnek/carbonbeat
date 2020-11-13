@@ -56,7 +56,7 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 
 	const maxRetryLimit = 3
 	siemFailsSinceLastSuccess := 0
-	apiFailsSinceLastSuccess := 0
+	//apiFailsSinceLastSuccess := 0
 	bt.client = b.Publisher.Connect()
 	ticker := time.NewTicker(bt.config.Period)
 	for {
@@ -82,16 +82,16 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 			siemFailsSinceLastSuccess = 0
 		}
 
-		apiErr := bt.FetchAndSendAPIEvents()
-		if apiErr != nil {
-			if apiFailsSinceLastSuccess > maxRetryLimit {
-				return apiErr
-			}
-			apiFailsSinceLastSuccess++
-			logp.Critical("Fetching API events failed, got: %s", apiErr)
-		} else {
-			apiFailsSinceLastSuccess = 0
-		}
+		//apiErr := bt.FetchAndSendAPIEvents()
+		//if apiErr != nil {
+		//	if apiFailsSinceLastSuccess > maxRetryLimit {
+		//		return apiErr
+		//	}
+		//	apiFailsSinceLastSuccess++
+		//	logp.Critical("Fetching API events failed, got: %s", apiErr)
+		//	} else {
+		//	apiFailsSinceLastSuccess = 0
+		//}
 	}
 }
 

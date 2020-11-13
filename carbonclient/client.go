@@ -48,8 +48,9 @@ func (c *Client) FetchSIEMEvents(endpoint string) (Notifications, error) {
 	}
 	endpoint = strings.TrimPrefix(endpoint, "/")
 	endpoint = fmt.Sprintf("%s/%s", c.cfg.SIEMHost, endpoint)
-	fmt.printf("%v\n",endpoint)
 	resp, err := authenticatedSIEMGet(c, endpoint)
+	fmt.Printf("printing resp\n")
+	fmt.Printf("%v\n",resp)
 	if err != nil {
 		return events, err
 	}
@@ -66,7 +67,9 @@ func (c *Client) FetchSIEMEvents(endpoint string) (Notifications, error) {
 			return events, err
 		}
 		logp.Debug("api", "API response body: %s", body)
+		fmt.Printf("%v\n actually printing and going to parse the Notification body")
 		events, err = parseNotificationsResBody(body)
+		fmt.Printf("%v\n printing events", events)
 		return events, err
 	case 400:
 		body, err := ioutil.ReadAll(resp.Body)
