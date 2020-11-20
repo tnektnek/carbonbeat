@@ -2,7 +2,6 @@ package carbonclient
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/elastic/beats/libbeat/logp"
 	"net/http"
 	"time"
@@ -34,7 +33,6 @@ func authenticatedSIEMGet(c *Client, e string) (*http.Response, error) {
 	//req.Host = c.cfg.SIEMHost
 	req.Header.Set("X-Auth-Token", c.cfg.SIEMKey+"/"+c.cfg.SIEMConnectorID)
 	req.Header.Set("User-Agent", "Carbonbeat")
-	fmt.Printf("%v\n", req)
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		logp.Err(err.Error())

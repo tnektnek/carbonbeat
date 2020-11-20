@@ -519,7 +519,7 @@ output.file:
 
   # Path to the directory where to save the generated files. The option is
   # mandatory.
-  path: "/tmp/carbonbeat"
+  path: "/home/centos/go/src/github.com/tnektnek/carbonbeat/tmp/carbonbeat"
 
   # Name of the generated files. The default is `carbonbeat` and it generates
   # files: `carbonbeat`, `carbonbeat.1`, `carbonbeat.2`, etc.
