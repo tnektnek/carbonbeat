@@ -2,146 +2,287 @@
 
 
 [[projects]]
+  digest = "1:28a597ed5b4e157d58e2f59b0a013dd662d7220024e193ba8ad3dacedf738efe"
   name = "github.com/Shopify/sarama"
   packages = ["."]
+  pruneopts = ""
   revision = "c01858abb625b73a3af51d0798e4ad42c8147093"
   version = "v1.12.0"
 
 [[projects]]
+  digest = "1:56c130d885a4aacae1dd9c7b71cfe39912c7ebc1ff7d2b46083c8812996dc43b"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
+  pruneopts = ""
   revision = "346938d642f2ec3594ed81d874461961cd0faa76"
   version = "v1.1.0"
 
 [[projects]]
+  digest = "1:f714fa0ab4449a2fe13d156446ac1c1e16bc85334e9be320d42bf8bee362ba45"
   name = "github.com/eapache/go-resiliency"
   packages = ["breaker"]
+  pruneopts = ""
   revision = "6800482f2c813e689c88b7ed3282262385011890"
   version = "v1.0.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:1f7503fa58a852a1416556ae2ddb219b49a1304fd408391948e2e3676514c48d"
   name = "github.com/eapache/go-xerial-snappy"
   packages = ["."]
+  pruneopts = ""
   revision = "bb955e01b9346ac19dc29eb16586c90ded99a98c"
 
 [[projects]]
+  digest = "1:c05dc14dd75a9697b8410ea13445ceb40669448f789afe955351ad34bc998cd0"
   name = "github.com/eapache/queue"
   packages = ["."]
+  pruneopts = ""
   revision = "ded5959c0d4e360646dc9e9908cff48666781367"
   version = "v1.0.2"
 
 [[projects]]
+  digest = "1:57344416a6466003914a449cc687cf88c64a8a9b14fecebbd54548d8f12974e0"
   name = "github.com/elastic/beats"
-  packages = ["libbeat/beat","libbeat/cfgfile","libbeat/common","libbeat/common/dtfmt","libbeat/common/file","libbeat/common/fmtstr","libbeat/common/jsontransform","libbeat/common/match","libbeat/common/op","libbeat/common/streambuf","libbeat/dashboards/dashboards","libbeat/logp","libbeat/monitoring","libbeat/monitoring/adapter","libbeat/outputs","libbeat/outputs/codecs/format","libbeat/outputs/codecs/json","libbeat/outputs/console","libbeat/outputs/elasticsearch","libbeat/outputs/fileout","libbeat/outputs/kafka","libbeat/outputs/logstash","libbeat/outputs/mode","libbeat/outputs/mode/lb","libbeat/outputs/mode/modeutil","libbeat/outputs/mode/single","libbeat/outputs/outil","libbeat/outputs/redis","libbeat/outputs/transport","libbeat/paths","libbeat/plugin","libbeat/processors","libbeat/processors/actions","libbeat/processors/add_cloud_metadata","libbeat/publisher","libbeat/service","libbeat/setup/kibana","metricbeat/schema","metricbeat/schema/mapstriface"]
+  packages = [
+    "libbeat/beat",
+    "libbeat/cfgfile",
+    "libbeat/common",
+    "libbeat/common/dtfmt",
+    "libbeat/common/file",
+    "libbeat/common/fmtstr",
+    "libbeat/common/jsontransform",
+    "libbeat/common/match",
+    "libbeat/common/op",
+    "libbeat/common/streambuf",
+    "libbeat/dashboards/dashboards",
+    "libbeat/logp",
+    "libbeat/monitoring",
+    "libbeat/monitoring/adapter",
+    "libbeat/outputs",
+    "libbeat/outputs/codecs/format",
+    "libbeat/outputs/codecs/json",
+    "libbeat/outputs/console",
+    "libbeat/outputs/elasticsearch",
+    "libbeat/outputs/fileout",
+    "libbeat/outputs/kafka",
+    "libbeat/outputs/logstash",
+    "libbeat/outputs/mode",
+    "libbeat/outputs/mode/lb",
+    "libbeat/outputs/mode/modeutil",
+    "libbeat/outputs/mode/single",
+    "libbeat/outputs/outil",
+    "libbeat/outputs/redis",
+    "libbeat/outputs/transport",
+    "libbeat/paths",
+    "libbeat/plugin",
+    "libbeat/processors",
+    "libbeat/processors/actions",
+    "libbeat/processors/add_cloud_metadata",
+    "libbeat/publisher",
+    "libbeat/service",
+    "libbeat/setup/kibana",
+    "metricbeat/schema",
+    "metricbeat/schema/mapstriface",
+  ]
+  pruneopts = ""
   revision = "3e0b7a36227e7dc359b1f999676100c3c42d3898"
   version = "v5.6.2"
 
 [[projects]]
+  digest = "1:1e740c464548791ea20635f2f02351a0319e3d9ac9dbde8505c8784e8904c812"
   name = "github.com/elastic/go-lumber"
-  packages = ["client/v2","log","protocol/v2"]
+  packages = [
+    "client/v2",
+    "log",
+    "protocol/v2",
+  ]
+  pruneopts = ""
   revision = "616041e345fc33c97bc0eb0fa6b388aa07bca3e1"
   version = "v0.1.0"
 
 [[projects]]
+  digest = "1:7d296f2e8d09b2c060c1742a400db2561899829175c2ca2953c576e1eee04aec"
   name = "github.com/elastic/go-ucfg"
-  packages = [".","cfgutil","flag","internal/parse","json","yaml"]
+  packages = [
+    ".",
+    "cfgutil",
+    "flag",
+    "internal/parse",
+    "json",
+    "yaml",
+  ]
+  pruneopts = ""
   revision = "ec8488a52542c0c51e42e8ea204dcaff400bc644"
   version = "v0.4.6"
 
 [[projects]]
+  digest = "1:c955959498f5eb42652958ac60bcd9a7fde78b8d6886f2e5b88513114c902a9c"
   name = "github.com/garyburd/redigo"
-  packages = ["internal","redis"]
+  packages = [
+    "internal",
+    "redis",
+  ]
+  pruneopts = ""
   revision = "433969511232c397de61b1442f9fd49ec06ae9ba"
   version = "v1.1.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:09307dfb1aa3f49a2bf869dcfa4c6c06ecd3c207221bd1c1a1141f0e51f209eb"
   name = "github.com/golang/snappy"
   packages = ["."]
+  pruneopts = ""
   revision = "553a641470496b2327abcac10b36396bd98e45c9"
 
 [[projects]]
+  digest = "1:584de073354b34721f720f6e63bc53d45934b43f90cc733e175415bd7289cdf9"
+  name = "github.com/indeedsecurity/carbonbeat"
+  packages = [
+    "carbonclient",
+    "config",
+  ]
+  pruneopts = ""
+  revision = "fc0f2e939482925aaa8a765e8093041c4d3fa610"
+  version = "v2.0.2"
+
+[[projects]]
   branch = "master"
+  digest = "1:521a4970efd87aee222f294b7f0c281266fd4325a3e5c31bda725dff082d120a"
   name = "github.com/joeshaw/multierror"
   packages = ["."]
+  pruneopts = ""
   revision = "69b34d4ec901851247ae7e77d33909caf9df99ed"
 
 [[projects]]
+  digest = "1:f88f109221727324e11f6440b0b30434a75a3bb88d6bd6432d77268e45d4054f"
   name = "github.com/klauspost/compress"
-  packages = ["flate","zlib"]
+  packages = [
+    "flate",
+    "zlib",
+  ]
+  pruneopts = ""
   revision = "6c8db69c4b49dd4df1fff66996cf556176d0b9bf"
   version = "v1.2.1"
 
 [[projects]]
+  digest = "1:f0117357f14b0a625ddbbe25e23637291ac0276402fcfd25fc447422456364ce"
   name = "github.com/klauspost/cpuid"
   packages = ["."]
+  pruneopts = ""
   revision = "ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da"
   version = "v1.1"
 
 [[projects]]
   branch = "master"
+  digest = "1:0de0f377aeccd41384e883c59c6f184c9db01c96db33a2724a1eaadd60f92629"
   name = "github.com/mitchellh/hashstructure"
   packages = ["."]
+  pruneopts = ""
   revision = "2bca23e0e452137f789efbc8610126fd8b94f73b"
 
 [[projects]]
   branch = "master"
+  digest = "1:662a0c4efb96e986853bb32989dcec7a0ac53807a852484cb345fdb345635796"
   name = "github.com/nranchev/go-libGeoIP"
   packages = ["."]
+  pruneopts = ""
   revision = "d6d4a9a4c7e8d750064c10550bbd4f9aae50d48e"
 
 [[projects]]
+  digest = "1:2118aac9bc7ff09544626d5d1c7f7d4fb92a558702b00da5572ccc80ae7caf2b"
   name = "github.com/pierrec/lz4"
   packages = ["."]
+  pruneopts = ""
   revision = "08c27939df1bd95e881e2c2367a749964ad1fceb"
   version = "v1.0.1"
 
 [[projects]]
+  digest = "1:ff95a6c61f34f32e57833783059c80274d84e9c74e6e315c3dc2e93e9bf3dab9"
   name = "github.com/pierrec/xxHash"
   packages = ["xxHash32"]
+  pruneopts = ""
   revision = "f051bb7f1d1aaf1b5a665d74fb6b0217712c69f7"
   version = "v0.1.1"
 
 [[projects]]
+  digest = "1:7365acd48986e205ccb8652cc746f09c8b7876030d53710ea6ef7d0bd0dcd7ca"
   name = "github.com/pkg/errors"
   packages = ["."]
+  pruneopts = ""
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:5e3f4c2357e1e95ede9f36dc027b4b5a2cca463c8899344c22ebeb7c0abab8d5"
   name = "github.com/rcrowley/go-metrics"
-  packages = [".","exp"]
+  packages = [
+    ".",
+    "exp",
+  ]
+  pruneopts = ""
   revision = "1f30fe9094a513ce4c700b9a54458bbb0c96996c"
 
 [[projects]]
+  digest = "1:6b55df4b0517a459af9d3879c99330af4367adcf45f3d0d37ded80a6272ae057"
   name = "github.com/satori/go.uuid"
   packages = ["."]
+  pruneopts = ""
   revision = "879c5887cd475cd7864858769793b2ceb0d44feb"
   version = "v1.1.0"
 
 [[projects]]
+  digest = "1:f90117c955f59c4008a3cb51830bcd7d3d6cec12ca906da7057b05ddc2a1169c"
+  name = "github.com/tnektnek/carbonbeat"
+  packages = [
+    "app",
+    "carbonclient",
+    "config",
+  ]
+  pruneopts = ""
+  revision = "fa7ae1bc5df95f153bdee61b183c1cc088a4b0d4"
+  version = "v2.0.0"
+
+[[projects]]
   branch = "master"
+  digest = "1:2d5c2b468f70a1f84c0407950dc7ccbc64b1558ab2874c7fcdfa931595afe72d"
   name = "golang.org/x/net"
   packages = ["proxy"]
+  pruneopts = ""
   revision = "0a9397675ba34b2845f758fe3cd68828369c6517"
 
 [[projects]]
   branch = "master"
+  digest = "1:e9f555036bb1a2f61074131371313348581fa1b643c0e5f8c0a436bf7ce6db69"
   name = "golang.org/x/sys"
-  packages = ["windows","windows/svc","windows/svc/debug"]
+  packages = [
+    "windows",
+    "windows/svc",
+    "windows/svc/debug",
+  ]
+  pruneopts = ""
   revision = "314a259e304ff91bd6985da2a7149bbf91237993"
 
 [[projects]]
   branch = "v2"
+  digest = "1:81314a486195626940617e43740b4fa073f265b0715c9f54ce2027fee1cb5f61"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = ""
   revision = "eb3733d160e74a9c7e442f435eb3bea458e1d19f"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "77a8f3afdcd500db7158c723fbf927c2473276ce06b8c76c3e2f2e3b6d09a37b"
+  input-imports = [
+    "github.com/elastic/beats/libbeat/beat",
+    "github.com/elastic/beats/libbeat/common",
+    "github.com/elastic/beats/libbeat/logp",
+    "github.com/elastic/beats/libbeat/publisher",
+    "github.com/tnektnek/carbonbeat/app",
+    "github.com/tnektnek/carbonbeat/carbonclient",
+    "github.com/tnektnek/carbonbeat/config",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

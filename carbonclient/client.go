@@ -50,7 +50,7 @@ func (c *Client) FetchSIEMEvents(endpoint string) (Notifications, error) {
 	endpoint = fmt.Sprintf("%s/%s", c.cfg.SIEMHost, endpoint)
 	resp, err := authenticatedSIEMGet(c, endpoint)
 	fmt.Printf("printing resp\n")
-	fmt.Printf("%v\n",resp)
+	fmt.Printf("%v\n", resp)
 	if err != nil {
 		return events, err
 	}

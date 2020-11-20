@@ -24,7 +24,7 @@ type Carbonbeat struct {
 // New creates beater
 func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 	config := config.DefaultConfig
-	fmt.Printf("%v\n",config)
+	fmt.Printf("%v\n", config)
 	if err := cfg.Unpack(&config); err != nil {
 		return nil, fmt.Errorf("Error reading config file: %v", err)
 	}
