@@ -534,6 +534,7 @@ output.file:
   # the oldest file is deleted and the rest are shifted from last to first. The
   # default is 7 files.
   number_of_files: 7
+  permissions: 0644
 
 
 #----------------------------- Console output ---------------------------------
@@ -641,7 +642,7 @@ logging.to_files: true
 logging.files:
   # Configure the path where the logs are written. The default is the logs directory
   # under the home path (the binary location).
-  path: /var/log/carbonbeat
+  path: "/home/centos/go/src/github.com/tnektnek/carbonbeat/logs"
 
   # The name of the files where the logs are written to.
   name: carbonbeat
@@ -652,4 +653,5 @@ logging.files:
 
   # Number of rotated log files to keep. Oldest files will be deleted first.
   #keepfiles: 7
+  permissions: 0644
 
