@@ -64,8 +64,9 @@ func (c *Client) FetchSIEMEvents(endpoint string) (Notifications, error) {
 		if err != nil {
 			return events, err
 		}
-		//logp.Debug("api", "API response body: %s", body)
+		logp.Debug("api", "API response body: %s", body)
 		events, err = parseNotificationsResBody(body)
+		fmt.Printf("%v\n printing events", events)
 		return events, err
 	case 400:
 		body, err := ioutil.ReadAll(resp.Body)
