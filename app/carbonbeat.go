@@ -9,8 +9,8 @@ import (
 	"github.com/elastic/beats/libbeat/logp"
 	"github.com/elastic/beats/libbeat/publisher"
 
-	"github.com/tnektnek/carbonbeat/carbonclient"
-	"github.com/tnektnek/carbonbeat/config"
+	"github.com/indeedsecurity/carbonbeat/carbonclient"
+	"github.com/indeedsecurity/carbonbeat/config"
 )
 
 // Carbonbeat is the parent that provides fields for the methods
@@ -24,7 +24,6 @@ type Carbonbeat struct {
 // New creates beater
 func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 	config := config.DefaultConfig
-	fmt.Printf("%v\n", config)
 	if err := cfg.Unpack(&config); err != nil {
 		return nil, fmt.Errorf("Error reading config file: %v", err)
 	}
@@ -89,7 +88,7 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 		//	}
 		//	apiFailsSinceLastSuccess++
 		//	logp.Critical("Fetching API events failed, got: %s", apiErr)
-		//	} else {
+		//} else {
 		//	apiFailsSinceLastSuccess = 0
 		//}
 	}
@@ -119,7 +118,10 @@ func (bt *Carbonbeat) FetchAndSendSIEMEvents() error {
 		logp.Critical("processing notifications failed because of: %s", err)
 		return err
 	}
-	bt.client.PublishEvents(processedNotifications, publisher.Guaranteed)
+	bt.client.PublishEvents(processedNotifications, publisher.Sync, publisher.Guaranteed)
+	if !bt.client.PublishEvents(processedNotifications, publisher.Sync, publisher.Guaranteed) {
+		return fmt.Errorf("Error publishing events")
+	}
 	logp.Debug("api", "notification events sent: %v", processedNotifications)
 	return nil
 }
