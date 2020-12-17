@@ -90,15 +90,14 @@ name: cb
 # Configure what outputs to use when sending the data collected by the beat.
 # Multiple outputs may be used.
 
-=======
 # Port 5044 on the host running the Open Collector is the correct place to send things by default. You can confirm this by running `./cmd/lrctl/shell/lrctl --dev oc config export | grep -A 8 "lumberjack:"` and seeing what the `lumberjack->tcp->port` value is set to.
 #----------------------------- Logstash output ---------------------------------
-#output.logstash:
+output.logstash:
   # Boolean flag to enable or disable the output module.
-  #enabled: true
+  enabled: true
 
   # The Logstash hosts
-  #hosts: ["localhost:5044"]
+  hosts: ["localhost:5044"]
 
   # Number of workers per Logstash host.
   #worker: 1
@@ -157,27 +156,27 @@ name: cb
 
 
 #------------------------------- File output -----------------------------------
-output.file:
+#output.file:
   # Boolean flag to enable or disable the output module.
-  enabled: true
+  #enabled: true
 
   # Path to the directory where to save the generated files. The option is
   # mandatory.
-  path: "/home/centos/go/src/github.com/tnektnek/carbonbeat/"
+  #path: "/tmp/carbonbeat/logs/"
 
   # Name of the generated files. The default is `carbonbeat` and it generates
   # files: `carbonbeat`, `carbonbeat.1`, `carbonbeat.2`, etc.
-  filename: carbonbeat_logs
+  #filename: carbonbeat_logs
 
   # Maximum size in kilobytes of each file. When this size is reached, and on
   # every carbonbeat restart, the files are rotated. The default value is 10240
   # kB.
-  rotate_every_kb: 10000
+  #rotate_every_kb: 10000
 
   # Maximum number of files under path. When this number of files is reached,
   # the oldest file is deleted and the rest are shifted from last to first. The
   # default is 7 files.
-  number_of_files: 7
+  #number_of_files: 7
 
 
 #----------------------------- Console output ---------------------------------
