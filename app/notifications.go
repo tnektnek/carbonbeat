@@ -6,7 +6,7 @@ import (
 
 	"github.com/elastic/beats/libbeat/common"
 	"github.com/elastic/beats/libbeat/logp"
-	"github.com/indeedsecurity/carbonbeat/carbonclient"
+	"github.com/tnektnek/carbonbeat/carbonclient"
 )
 
 func (bt *Carbonbeat) processNotifications(n carbonclient.Notifications) ([]common.MapStr, error) {

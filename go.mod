@@ -14,6 +14,7 @@ require (
 	github.com/elastic/go-ucfg v0.4.6 // indirect
 	github.com/garyburd/redigo v1.1.0 // indirect
 	github.com/golang/snappy v0.0.0-20170215233205-553a64147049 // indirect
+	github.com/indeedsecurity/carbonbeat v1.0.0
 	github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901 // indirect
 	github.com/klauspost/compress v1.2.1 // indirect
 	github.com/klauspost/cpuid v0.0.0-20170728055534-ae7887de9fa5 // indirect
