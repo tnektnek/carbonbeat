@@ -3,7 +3,7 @@
 ## Setting up the dev environment
 
 Ensure that this folder is at the following location:
-`${GOPATH}/github.com/indeedsecurity/carbonbeat`
+`${GOPATH}/github.com/tnektnek/carbonbeat`
 
 ### Requirements
 
@@ -31,44 +31,6 @@ To run Carbonbeat with debugging output enabled, run:
 ```
 
 
-### Test
-
-To test Carbonbeat, run the following command:
-
-```
-make testsuite
-```
-
-alternatively:
-```
-make unit-tests
-make system-tests
-make integration-tests
-make coverage-report
-```
-
-The test coverage is reported in the folder `./build/coverage/`
-
-### Update
-
-Each beat has a template for the mapping in elasticsearch and a documentation for the fields
-which is automatically generated based on `etc/fields.yml`.
-To generate etc/carbonbeat.template.json and etc/carbonbeat.asciidoc
-
-```
-make update
-```
-
-
-### Cleanup
-
-To clean  Carbonbeat source code, run the following commands:
-
-```
-make fmt
-make simplify
-```
-
 To clean up the build directory and generated artifacts, run:
 
 ```
@@ -81,9 +43,9 @@ make clean
 To clone Carbonbeat from the git repository, run the following commands:
 
 ```
-mkdir -p ${GOPATH}/github.com/indeedsecurity/carbonbeat
-cd ${GOPATH}/github.com/indeedsecurity/carbonbeat
-git clone https://github.com/indeedsecurity/carbonbeat
+mkdir -p ${GOPATH}/github.com/tnektnek/carbonbeat
+cd ${GOPATH}/github.com/tnektnek/carbonbeat
+git clone https://github.com/tnektnek/carbonbeat
 ```
 
 ## Packaging
