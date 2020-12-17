@@ -7,23 +7,13 @@ carbonbeat:
   period: 1
 
   siem:
-<<<<<<< HEAD
     id: 
     key: 
-    host: 
+    host: https://defense-prod05.conferdeploy.net
   api:
     id: 
     key: 
-    host:
-=======
-    id: 85122J76AZ
-    key: V7CVD5IM4KJKMZDDZV4B66ZM
     host: https://defense-prod05.conferdeploy.net
-  api:
-    id: 14752
-    key: N33FQL3R
-    host: https://defense-prod05.conferdeploy.net
->>>>>>> 42f0668 (committing content to begin merge)
 
 #================================ General =====================================
 
@@ -100,7 +90,6 @@ name: cb
 # Configure what outputs to use when sending the data collected by the beat.
 # Multiple outputs may be used.
 
-<<<<<<< HEAD
 =======
 # Port 5044 on the host running the Open Collector is the correct place to send things by default. You can confirm this by running `./cmd/lrctl/shell/lrctl --dev oc config export | grep -A 8 "lumberjack:"` and seeing what the `lumberjack->tcp->port` value is set to.
 #----------------------------- Logstash output ---------------------------------
@@ -165,7 +154,7 @@ name: cb
 
   # Configure curve types for ECDHE based cipher suites
   #ssl.curve_types: []
->>>>>>> 42f0668 (committing content to begin merge)
+
 
 #------------------------------- File output -----------------------------------
 output.file:
