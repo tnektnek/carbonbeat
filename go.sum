@@ -20,6 +20,8 @@ github.com/garyburd/redigo v1.1.0 h1:kTY6M1SUxdOiFU4rbXWTtDBsTnfsXo4vDhXzhGMjdwk
 github.com/garyburd/redigo v1.1.0/go.mod h1:NR3MbYisc3/PwhQ00EMzDiPmrwpPxAn5GI05/YaO1SY=
 github.com/golang/snappy v0.0.0-20170215233205-553a64147049 h1:K9KHZbXKpGydfDN0aZrsoHpLJlZsBrGMFWbgLDGnPZk=
 github.com/golang/snappy v0.0.0-20170215233205-553a64147049/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
+github.com/indeedsecurity/carbonbeat v1.0.0 h1:gVdr4/6Y9lTlclq6QiIBUlLbcIlrTh6obDFt+cjdhqo=
+github.com/indeedsecurity/carbonbeat v1.0.0/go.mod h1:4GAo6GenCrDJHfXShNTImWpCTJZdddcrFrpIB610fbc=
 github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901 h1:rp+c0RAYOWj8l6qbCUTSiRLG/iKnW3K3/QfPPuSsBt4=
 github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901/go.mod h1:Z86h9688Y0wesXCyonoVr47MasHilkuLMqGhRZ4Hpak=
 github.com/klauspost/compress v1.2.1 h1:z1Ra6IKoPtIeVA8GV0SCQhuo6T4EBjlL9VwonZ8NYBo=
@@ -52,5 +54,6 @@ golang.org/x/net v0.0.0-20170927055102-0a9397675ba3/go.mod h1:mL1N/T3taQHkDXs73r
 golang.org/x/sys v0.0.0-20170927054621-314a259e304f/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.0.0-20170812160011-eb3733d160e7/go.mod h1:JAlM8MvJe8wmxCU4Bli9HhUf9+ttbYbLASfIpnQbh74=
 gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=
 gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
