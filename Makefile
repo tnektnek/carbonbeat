@@ -1,5 +1,5 @@
 BEAT_NAME=carbonbeat
-BEAT_PATH=github.com/indeedsecurity/carbonbeat
+BEAT_PATH=github.com/tnektnek/carbonbeat
 BEAT_GOPATH=$(firstword $(subst :, ,${GOPATH}))
 BEAT_URL=https://${BEAT_PATH}
 SYSTEM_TESTS=false

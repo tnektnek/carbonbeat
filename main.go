@@ -5,7 +5,11 @@ import (
 
 	"github.com/elastic/beats/libbeat/beat"
 
-	"github.com/indeedsecurity/carbonbeat/v2/app"
+<<<<<<< HEAD
+	"github.com/indeedsecurity/carbonbeat/app"
+=======
+	"github.com/tnektnek/carbonbeat/app"
+>>>>>>> 42f0668 (committing content to begin merge)
 )
 
 func main() {

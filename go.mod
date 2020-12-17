@@ -1,4 +1,4 @@
-module github.com/indeedsecurity/carbonbeat/v2
+module github.com/indeedsecurity/carbonbeat
 
 go 1.12
 

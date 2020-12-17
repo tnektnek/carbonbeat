@@ -29,7 +29,7 @@ type Notification struct {
 			ActorProcessPPid string `json:"actorProcessPPid"`
 			CauseEventID     string `json:"causeEventId"`
 		} `json:"threatCause"`
-	} `json:"threatInfo,omitempty"`
+	} `json:"threatHunterInfo,omitempty"`
 	URL              string `json:"url"`
 	EventTime        int64  `json:"eventTime"`
 	EventDescription string `json:"eventDescription"`

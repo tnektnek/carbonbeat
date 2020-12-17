@@ -1,0 +1,1 @@
+{"@timestamp":"2019-01-27T18:44:31.071Z","@metadata":{"beat":"carbon_beat","type":"doc","version":"1.0.0"},"response":{},"beat":{"name":"carbon_beat","hostname":"myHost","version":"1.0.0"},"host":{"name":"myHost"}}

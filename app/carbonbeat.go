@@ -9,8 +9,8 @@ import (
 	"github.com/elastic/beats/libbeat/logp"
 	"github.com/elastic/beats/libbeat/publisher"
 
-	"github.com/indeedsecurity/carbonbeat/v2/carbonclient"
-	"github.com/indeedsecurity/carbonbeat/v2/config"
+	"github.com/indeedsecurity/carbonbeat/carbonclient"
+	"github.com/indeedsecurity/carbonbeat/config"
 )
 
 // Carbonbeat is the parent that provides fields for the methods
@@ -55,7 +55,7 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 
 	const maxRetryLimit = 3
 	siemFailsSinceLastSuccess := 0
-	apiFailsSinceLastSuccess := 0
+	//apiFailsSinceLastSuccess := 0
 	bt.client = b.Publisher.Connect()
 	ticker := time.NewTicker(bt.config.Period)
 	for {
@@ -81,16 +81,16 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 			siemFailsSinceLastSuccess = 0
 		}
 
-		apiErr := bt.FetchAndSendAPIEvents()
-		if apiErr != nil {
-			if apiFailsSinceLastSuccess > maxRetryLimit {
-				return apiErr
-			}
-			apiFailsSinceLastSuccess++
-			logp.Critical("Fetching API events failed, got: %s", apiErr)
-		} else {
-			apiFailsSinceLastSuccess = 0
-		}
+		//apiErr := bt.FetchAndSendAPIEvents()
+		//if apiErr != nil {
+		//	if apiFailsSinceLastSuccess > maxRetryLimit {
+		//		return apiErr
+		//	}
+		//	apiFailsSinceLastSuccess++
+		//	logp.Critical("Fetching API events failed, got: %s", apiErr)
+		//} else {
+		//	apiFailsSinceLastSuccess = 0
+		//}
 	}
 }
 
@@ -99,7 +99,7 @@ func (bt *Carbonbeat) Run(b *beat.Beat) error {
 func (bt *Carbonbeat) Stop() {
 	err := bt.client.Close()
 	if err != nil {
-		logp.Critical("stopping the beat client failed because of: ", err)
+		logp.Critical(fmt.Sprintf("stopping the beat client failed because of: %s", err.Error()))		
 	}
 	close(bt.done)
 }
@@ -118,7 +118,10 @@ func (bt *Carbonbeat) FetchAndSendSIEMEvents() error {
 		logp.Critical("processing notifications failed because of: %s", err)
 		return err
 	}
-	bt.client.PublishEvents(processedNotifications, publisher.Guaranteed)
+	bt.client.PublishEvents(processedNotifications, publisher.Sync, publisher.Guaranteed)
+	if !bt.client.PublishEvents(processedNotifications, publisher.Sync, publisher.Guaranteed) {
+		return fmt.Errorf("Error publishing events")
+	}
 	logp.Debug("api", "notification events sent: %v", processedNotifications)
 	return nil
 }
