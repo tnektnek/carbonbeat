@@ -1,7 +1,6 @@
-# Carbonbeat
+# CarbonBlack Threat Hunter Beat 
 
 Carbonbeat currently supports shipping notifications from the Carbon Black Threat Hunter notifications API. A syslog approach can be done via CB's standard syslog connector [here](https://github.com/carbonblack/cbc-syslog).
-=======
 
 Refer to CONTRIBUTING.md for how to make and build the binary. This is specifically for Carbon Black Threat Hunter Cloud pulling from the /v3/api/notiications endpoint. Additional API permissions are needed and adjustments made if attempting to pull Audit Events as well, which is what the default master branch is intended to do.
 
